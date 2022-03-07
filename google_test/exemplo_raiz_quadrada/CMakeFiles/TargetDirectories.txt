@@ -1,0 +1,3 @@
+/home/giovani/Seafile/UFSC/ufsc/extensao/curso_modelagem_WEG-Jun-2020/teste_de_software/google_test/exemplo_raiz_quadrada/CMakeFiles/rebuild_cache.dir
+/home/giovani/Seafile/UFSC/ufsc/extensao/curso_modelagem_WEG-Jun-2020/teste_de_software/google_test/exemplo_raiz_quadrada/CMakeFiles/runTests.dir
+/home/giovani/Seafile/UFSC/ufsc/extensao/curso_modelagem_WEG-Jun-2020/teste_de_software/google_test/exemplo_raiz_quadrada/CMakeFiles/edit_cache.dir

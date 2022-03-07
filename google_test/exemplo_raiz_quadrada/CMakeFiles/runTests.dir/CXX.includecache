@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/giovani/Seafile/UFSC/ufsc/extensao/curso_modelagem_WEG-Jun-2020/teste_de_software/google_test/exemplo_raiz_quadrada/raiz.cc
+math.h
+-
+
+/home/giovani/Seafile/UFSC/ufsc/extensao/curso_modelagem_WEG-Jun-2020/teste_de_software/google_test/exemplo_raiz_quadrada/tests.cc
+raiz.cc
+/home/giovani/Seafile/UFSC/ufsc/extensao/curso_modelagem_WEG-Jun-2020/teste_de_software/google_test/exemplo_raiz_quadrada/raiz.cc
+gtest/gtest.h
+-
+
