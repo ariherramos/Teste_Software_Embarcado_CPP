@@ -1,0 +1,87 @@
+Este LVP está dividido em duas atividades. A primeira será a implementação do TDA pilha genérico. A segunda será utilizar o TDA implementado para resolver um problema. Abaixo encontram-se as descrições das duas atividades.
+
+PRIMEIRA ATIVIDADE: Implementação do TDA pilha genérico
+
+A pilha deverá deverá implementar as seguintes operações:
+
+- Criação da pilha;
+- Destruição da pilha;
+- Verificar se a pilha está vazia;
+- Verificar se a pilha está cheia;
+- Retornar o tamanho da pilha, ou seja, quantos elementos estão armazenados na pilha;
+- Empilhar um elemento na pilha;
+- Desempilhar um elemento na pilha;
+- Retornar o elemento do topo da pilha;
+- Imprimir a pilha;
+
+Para a implementação do TDA pilha genérico, os seguintes arquivos estão disponíveis:
+
+- "pilha_interface.h": Arquivo contendo a declaração das operações da pilha, com pré e pós condições para cada operação e uma pequena descrição do comportamento esperado da operação;
+
+- "pilha_privado.h": Arquivo contendo a declaração da estrutura de dados pilha_t. Note que ela possui um vetor do tipo void *, que deverá armazenar os elementos empilhados. A estrutura de dados não deve ser modificada em hipótese alguma;
+
+- "pilha.c": Arquivo que deverá conter a implementação das operações;
+
+
+SEGUNDA ATIVIDADE: solução do problema do estacionamento do Bashemin
+
+O Estacionamento de Bashemin contém uma única alameda que guarda até dez carros. Existe apenas uma entrada/saída no estacionamento, em uma extremidade da alameda. Se chegar um cliente para retirar um carro que não seja o mais próximo da saída, todos os carros bloqueando seu caminho sairão do estacionamento, o carro do cliente será manobrado para fora do estacionamento, e os outros carros voltarão a ocupar a mesma sequência inicial.
+
+Escreva uma função (estacionamento, veja o protótipo da função abaixo) que processe um grupo de linhas de entrada de um arquivo. Cada linha de entrada contém um 'E', de entrada, ou um 'S', de saída, e o número da placa do carro (o número da placa é uma string que varia de 1 a 7 caracteres ou números, não tendo relação com as placas de carros em uso no Brasil). A palavra FIM termina a sequência de comandos no arquivo. A sequencia abaixo exemplifica um arquivo de entrada:
+
+E 1ian39
+E 8r345
+E 123a
+S 8r345
+S 123a
+FIM
+Presume-se que os carros cheguem e partam na ordem especificada pela entrada. Abaixo encontra-se o protótipo da função (que também está no arquivo lab6.h) e que deverá ser implementada dentro do arquivo lab6.c:
+void estacionamento(const char *arquivo, void (*entrada)(carro_t *), void (*saida)(carro_t *));
+
+A função recebe um nome de arquivo como parâmetro, bem como dois ponteiros de funções, "entrada" e "saida". "entrada" deve ser chamada sempre que um carro entrar no estacionamento. "saida" deve ser chamada sempre que um carro sair do estacionamento. Toda vez que um carro sair do estacionamento manobrando para outro carro poder sair, deve-se incrementar o membro da estrutura carros_t "manobras", informando que o carro foi manobrado para fora do estacionamento para permitir que outros carros saíssem.
+
+Se um carro chegar e não existir vaga, as funções "entrada" e "saida" deverão ser chamadas, mas sem incrementar o membro da estrutura carros_t "manobras".
+
+Para a solução do exercício deve-se usar a pilha genérica implementada na primeira atividade, ou seja, o estacionamento é uma pilha de carros.
+
+Fonte: Livro Estruturas de Dados Usando C, Tenenbaum.
+
+Esse laboratório envolve os tópicos:
+
+Alocação Dinâmica de Memória
+Estruturas
+Funções
+Organização no formato de TDA
+TDA pilha
+
+A dinâmica desse laboratório segue o estilo dos laboratórios 2, 3, 4 e 5.
+
+Avaliação:
+
+Uso de variável global: -5
+Um vazamento de memória: -20%
+Mais de um vazamento de memória: -40%
+Não compila: 0.
+Expirou o tempo de 15 segundos: 0.
+Erro de execução (fim de programa anormal): 0.
+Uso da função exit: 0.
+Não utilização das operações do TDA Pilha na solução do estacionamento: 0.
+Obs: não utilize em seu arquivo .c caracteres especiais (á,é,õ,ã, etc) e comentários de múltiplas linhas iniciando e terminando em linhas diferentes.
+
+Cada função avaliada tem um peso diferente:
+
+- Criação e destruição, cheia, vazia, tamanho, topo e imprime: 0.5
+- Empilha e desempilha: 2
+- Estacionamento: 2
+
+Para comentar múltiplas linhas siga o exemplo abaixo:
+
+//linha 1 de um comentario 
+//linha 2 de um comentario 
+//linha 3 de um comentario
+
+ou
+
+/*linha 1 de um comentario */
+/*linha 2 de um comentario */
+/*linha 3 de um comentario */

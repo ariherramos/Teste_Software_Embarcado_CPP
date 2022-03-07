@@ -1,0 +1,36 @@
+_GLOBAL_OFFSET_TABLE_|                |   U  |            NOTYPE|                |     |*UND*
+__isoc99_fscanf     |                |   U  |            NOTYPE|                |     |*UND*
+__stack_chk_fail    |                |   U  |            NOTYPE|                |     |*UND*
+estacionamento      |00000000000001ff|   T  |              FUNC|00000000000001b0|     |.text
+fclose              |                |   U  |            NOTYPE|                |     |*UND*
+feof                |                |   U  |            NOTYPE|                |     |*UND*
+fopen               |                |   U  |            NOTYPE|                |     |*UND*
+free                |                |   U  |            NOTYPE|                |     |*UND*
+imprime             |0000000000000000|   T  |              FUNC|0000000000000027|     |.text
+malloc              |                |   U  |            NOTYPE|                |     |*UND*
+memcpy              |                |   U  |            NOTYPE|                |     |*UND*
+pilha_cheia         |                |   U  |            NOTYPE|                |     |*UND*
+pilha_cria          |                |   U  |            NOTYPE|                |     |*UND*
+pilha_desempilha    |                |   U  |            NOTYPE|                |     |*UND*
+pilha_destroi       |                |   U  |            NOTYPE|                |     |*UND*
+pilha_empilha       |                |   U  |            NOTYPE|                |     |*UND*
+pilha_topo          |                |   U  |            NOTYPE|                |     |*UND*
+pilha_vazia         |                |   U  |            NOTYPE|                |     |*UND*
+printf              |                |   U  |            NOTYPE|                |     |*UND*
+processa_saida      |0000000000000027|   T  |              FUNC|00000000000001d8|     |.text
+puts                |                |   U  |            NOTYPE|                |     |*UND*
+strcmp              |                |   U  |            NOTYPE|                |     |*UND*
+_GLOBAL_OFFSET_TABLE_|                |   U  |            NOTYPE|                |     |*UND*
+__stack_chk_fail    |                |   U  |            NOTYPE|                |     |*UND*
+free                |                |   U  |            NOTYPE|                |     |*UND*
+malloc              |                |   U  |            NOTYPE|                |     |*UND*
+memcpy              |                |   U  |            NOTYPE|                |     |*UND*
+pilha_cheia         |0000000000000124|   T  |              FUNC|0000000000000036|     |.text
+pilha_cria          |0000000000000000|   T  |              FUNC|00000000000000b1|     |.text
+pilha_desempilha    |000000000000020e|   T  |              FUNC|0000000000000098|     |.text
+pilha_destroi       |00000000000000b1|   T  |              FUNC|0000000000000044|     |.text
+pilha_empilha       |0000000000000179|   T  |              FUNC|0000000000000095|     |.text
+pilha_imprime       |000000000000032d|   T  |              FUNC|0000000000000147|     |.text
+pilha_tamanho       |000000000000015a|   T  |              FUNC|000000000000001f|     |.text
+pilha_topo          |00000000000002a6|   T  |              FUNC|0000000000000087|     |.text
+pilha_vazia         |00000000000000f5|   T  |              FUNC|000000000000002f|     |.text

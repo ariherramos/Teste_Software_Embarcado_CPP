@@ -1,0 +1,58 @@
+#! /bin/bash
+
+PROG_SRC="lab6.c pilha.c"
+SRC_EVAL="lab6 pilha"
+PROG_OBJ="lab6.o pilha.o"
+PROG=grade_lab6
+TESTS=8
+
+. vpl_environment.sh
+
+echo "Comment :=>> Iniciando avaliação de compilação."
+
+gcc lab-main.c $PROG_SRC unity.c -lm -std=c99 -o $PROG > /dev/null
+
+#--- Se ocorreu algum erro na compilação, atribui valor ZERO na nota. ---
+if (($? > 0)); then
+     echo "Comment :=>> [☠☠☠] Erro: Teu programa tem erros de compilação."
+     echo "Comment :=>> Por favor, tente arrumá-los."
+     echo "Grade :=>> 0"
+     exit
+fi
+echo "Comment :=>> Acabou a avaliação de compilação."
+
+echo "Comment :=>> Iniciando avaliação de tempo máximo de execução."
+#analise de tempo de execução
+#--- spawn the program and get its pid ---
+timeout 15s ./$PROG > /dev/null; retcode=$?
+#--- if we killed the waiter, everything is good ---
+if [ $retcode -eq  124 ]; then
+    echo "Comment :=>> [☠☠☠] Erro: loop infinito ou travamento (crashed)!"
+    echo "Grade :=>> 0"
+    exit
+fi
+
+if [ $retcode -eq  139 ]; then
+    echo "Comment :=>> [☠☠☠] Erro: falha de segmentação (crashed)!"
+    echo "Grade :=>> 0"
+    exit
+fi
+echo "Comment :=>> Acabou a avaliação de tempo máximo de execução."
+
+#gerando o arquivo objeto para analise de variavel global
+gcc $PROG_SRC -lm -std=c99 -c -g > /dev/null
+#gerando o arquivo contendo informações de simbolos do codigo
+nm -C -f sysv $PROG_OBJ |  grep -e OBJECT -e FUNC -e NOTYPE > global.txt 
+
+echo "Comment :=>> Iniciando avaliação das funcoes."
+./$PROG
+RET=$?
+echo "Comment :=>> Acabou a avaliação das funcoes."
+
+gra=$( echo "scale=2;(1.0-$RET/$TESTS)*10" | bc -l )
+
+echo "Comment :=>> Iniciando avaliação de vazamento de memória."
+valgrind --leak-check=full --show-leak-kinds=all --xml=yes --xml-file=leak-memcheck.xml ./$PROG 
+
+python evaluation.py $gra $SRC_EVAL
+

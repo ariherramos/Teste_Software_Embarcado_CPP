@@ -1,0 +1,58 @@
+Neste VLP você deverá construir um Tipo de Dado Abstrato (TDA) para manipulação de conjuntos. O arquivo "conjunto_privado.h" contém a definição da estrutura para os conjuntos, chamada de "conjunto_t".
+
+As operações que deverão ser implementadas são:
+
+- Criar um conjunto;
+- Destruir um conjunto;
+- Retornar o número de elementos dentro do conjunto;
+- Inicializar um conjunto como conjunto vazio;
+- Realizar a união entre dois conjuntos;
+- Realizar a intersecção entre dois conjuntos;
+- Realizar a diferença entre dois conjuntos;
+- Verificar se um elemento pertence ou não a um conjunto;
+- Inserir um elemento em um conjunto;
+- Remover um elemento em um conjunto;
+- Atribuir um conjunto a outro (exemplo: conjunto a = conjunto b);
+- Verificar se dois conjuntos são iguais;
+- Retornar o valor do menor elemento dentro de um conjunto;
+- Retornar o valor do maior elemento dentro de um conjunto;
+- Imprimir todos os elementos do conjunto;
+
+Os seguintes arquivos estão disponíveis:
+
+- "conjunto_privado.h": possui a declaração da estrutura interna do TDA conjunto, conjunto_t, bem como possíveis funções internas ao TDA. Define ELEMENTOS com o valor 50, sendo que esta constante deverá ser utilizada para criar um conjunto que poderá conter inicialmente o número de 50 ELEMENTOS. Note que o tamanho do conjunto poderá aumentar conforme forem inseridos elementos, podendo ultrapassar o valor de ELEMENTOS. Certifique-se de controlar esse caso na sua implementação.
+- "conjunt_interface.h": contém as declarações das operações do TDA conjunto, contendo uma descrição, pré-condições e pós-condições para cada operação.
+- "conjunto.c": deve conter a implementação das funções da interface do TDA conjunto.
+
+Esse laboratório envolve os tópicos:
+
+Alocação Dinâmica de Memória
+Estruturas
+Funções
+Organização no formato de TDA
+
+A dinâmica desse laboratório segue o estilo dos laboratórios 2, 3 e 4.
+
+Avaliação:
+
+Uso de variável global: -5
+Um vazamento de memória: -20%
+Mais de um vazamento de memória: -40%
+Não compila: 0.
+Expirou o tempo de 120 segundos: 0.
+Erro de execução (fim de programa anormal): 0.
+Uso da função exit: 0.
+Obs: não utilize em seu arquivo .c caracteres especiais (á,é,õ,ã, etc) e comentários de múltiplas linhas iniciando e terminando em linhas diferentes.
+
+Para comentar múltiplas linhas siga o exemplo abaixo:
+
+//linha 1 de um comentario 
+//linha 2 de um comentario 
+//linha 3 de um comentario
+
+ou
+
+/*linha 1 de um comentario */
+/*linha 2 de um comentario */
+/*linha 3 de um comentario */
+
